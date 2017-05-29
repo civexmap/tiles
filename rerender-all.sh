@@ -6,6 +6,13 @@ cache="../cache/world_latest/"
 rustmap_install="../rustmap/"
 render="$rustmap_install/target/release/render"
 
+echo "Make sure you ..."
+echo "- updated the terrain tiles"
+echo "- updated the world_latest cache"
+echo "- normalized the zip files format"
+
+read
+
 python3 "$rustmap_install/py/cleanup.py" terrain/z0 -f
 python3 "$rustmap_install/py/zoom.py" terrain -6
 
